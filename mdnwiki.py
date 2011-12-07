@@ -95,11 +95,8 @@ class FormatAction(Action):
 
 
 class User(object):
-    '''
-    classdocs
-    '''
-    _urlpattern = "https://developer.mozilla.org/index.php?\
-title=Special:Contributions&feed=rss&target=%s"
+    _urlpattern = "https://developer.mozilla.org/index.php?"
+                  "title=Special:Contributions&feed=rss&target=%s"
     __action_count_matcher = re.compile(r"^Edited (\d+(?= times)|once|twice)")
     def __init__(self, user):
         '''
