@@ -103,9 +103,8 @@ class User(object):
         Constructor
         '''
         self.__user = user
-        #self.__dom = minidom.parse(urllib.urlopen(
-        #    self._urlpattern % urllib.quote_plus(user)))
-        self.__dom = minidom.parse("c:/users/byk/desktop/byk.xml")
+        self.__dom = minidom.parse(urllib.urlopen(
+            self._urlpattern % urllib.quote_plus(user)))
         self.__action_groups = self.__dom.getElementsByTagName("entry")
         self.__actions = None
 
